@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trading Academy</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+  
+<body>
+<header>
+  <div class="brand">TRADING <span>ACADEMY</span> ⚡</div>
+  <div class="xp">⭐ <span id="xp">0</span> XP</div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="tag">NIVEL 0 · PRINCIPIANTE ABSOLUTO</div>
+    <h1>Aprende trading jugando 🎮📈</h1>
+    <p>No vamos a memorizar definiciones aburridas. Cada módulo tiene explicación corta → ejemplo → decisión → corrección → XP.</p>
+
+    <div class="progress-wrap">
+      <div class="progress-label">
+        <span>Progreso del Nivel 0</span>
+        <span id="pct">8%</span>
+      </div>
+      <div class="bar">
+        <div class="fill" id="fill"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="grid">
+    <div class="card" onclick="openLesson('lesson1')">
+      <div class="icon">🧠</div>
+      <h3>Lección 1</h3>
+      <p>¿Qué es realmente hacer trading?</p>
+    </div>
+
+    <div class="card" onclick="openLesson('lesson2')">
+      <div class="icon">🎯</div>
+      <h3>Reto rápido</h3>
+      <p>Tu primera decisión de mercado.</p>
+    </div>
+
+    <div class="card" onclick="alert('🔒 Se desbloquea al completar los retos anteriores.')">
+      <div class="icon">🔒</div>
+      <h3>Simulador</h3>
+      <p>Próximamente: compra, venta o esperar.</p>
+    </div>
+  </div>
+
+  <section class="lesson" id="lesson1">
+    <div class="tag">LECCIÓN CORTA · 3 MIN</div>
+    <h2>¿Qué es trading?</h2>
+
+    <p><b>Trading</b> consiste en comprar y vender un activo intentando beneficiarse de los movimientos de su precio.</p>
+
+    <p>Ejemplo sencillo: compras un activo a <b>$100</b>. Si luego vale $110 y vendes, la diferencia sería una ganancia antes de considerar comisiones e impuestos. Pero también puede bajar: <b>no hay garantía de ganar</b>.</p>
+
+    <div class="question">
+      🎮 CHECKPOINT: Si compras algo esperando venderlo más caro después, ¿cuál describe mejor esa idea?
+    </div>
+
+    <div class="answers">
+      <button class="answer" onclick="check(this,false,'No exactamente. Eso describe una posible estrategia, pero falta entender que el precio puede subir o bajar.')">
+        A) Es una ganancia segura
+      </button>
+
+      <button class="answer" onclick="check(this,true,'¡Correcto! Estás intentando beneficiarte de un movimiento favorable del precio, pero existe riesgo de que ocurra lo contrario.')">
+        B) Intento beneficiarme de un movimiento del precio asumiendo riesgo
+      </button>
+
+      <button class="answer" onclick="check(this,false,'No. El trading implica riesgo y no garantiza resultados.')">
+        C) Es una forma de duplicar dinero rápidamente
+      </button>
+    </div>
+
+    <div class="feedback"></div>
+  </section>
+
+  <section class="lesson" id="lesson2">
+    <div class="tag">SIMULACIÓN · PRIMERA DECISIÓN</div>
+    <h2>El mercado no te debe una operación</h2>
+
+    <p>Imagina que un activo subió muchísimo durante varios minutos. Tú llegas tarde, ves gente emocionada y sientes FOMO.</p>
+
+    <div class="question">
+      📈 ¿Cuál es la mejor reacción de un principiante responsable?
+    </div>
+
+    <div class="answers">
+      <button class="answer" onclick="check(this,false,'Comprar solo porque está subiendo es perseguir el precio. Primero necesitas contexto y un plan.')">
+        A) Comprar inmediatamente porque seguro seguirá subiendo
+      </button>
+
+      <button class="answer" onclick="check(this,true,'¡Excelente! “No operar” también es una decisión. Primero analizamos, luego decidimos si existe una oportunidad con riesgo definido.')">
+        B) Esperar y analizar antes de arriesgar dinero
+      </button>
+
+      <button class="answer" onclick="check(this,false,'Vender automáticamente tampoco es análisis. Una subida no garantiza una caída.')">
+        C) Vender automáticamente porque ya subió demasiado
+      </button>
+    </div>
+
+    <div class="feedback"></div>
+  </section>
+
+  <div class="streak">
+    🔥 <b>Racha:</b> <span id="streak">0</span> respuestas correctas
+    &nbsp; | &nbsp;
+    🛡️ Regla de oro: <b>sobrevivir y aprender antes que buscar dinero rápido.</b>
+  </div>
+
+  <footer>
+    Trading Academy · Aprende → Decide → Recibe feedback → Sube de nivel
+  </footer>
+</main>
+<script src="./script.js"></script>
+</body>
+</html>
